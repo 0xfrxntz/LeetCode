@@ -1,0 +1,36 @@
+#include <iostream>
+
+class Solution {
+public:
+    string mergeAlternately(string word1, string word2) {
+
+        int m = word1.size();
+        int n = word2.size();
+
+        string result ="";
+
+        int i = 0;
+        int j = 0;
+
+        while (i < m || j < n) {
+            if (i < m) {
+                result.push_back(word1[i++]);
+            }
+            if (j < n) {
+                result.push_back(word2[j++]);
+            }
+        } 
+        return result;
+    }
+
+};
+
+   /* int main {
+        string s1 = "abc";
+        string s2 = "wxyz";
+
+        std::cout << mergeAlternately(s1,s2);
+
+        return 0;
+    }
+    */
